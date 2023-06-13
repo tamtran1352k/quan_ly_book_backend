@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Đăng nhập</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous"
+    />
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="./css/owl.carousel.min.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/owl.theme.default.min.css" /> -->
+    <link rel="stylesheet" href="/assets/css/home/main.css"/>
+</head>
+<body style="background-color: rgb(45, 194, 117);">
+<div class="dangNhap">
+    <form th:action="@{/home/login}" method="POST">
+        <div class="text-center  py-3">
+            <a th:href="@{/home}">BOOKSTORE</a>
+        </div>
+        <h3 class="text-center">Đăng nhập</h3>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+            />
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    placeholder="Password"
+            />
+        </div>
+        <!-- <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+        <button type="submit" class="btn btn-primary btnDangNhap">
+            Đăng nhập
+        </button>
+        <!--        <p>Bạn chưa có tài khoản? <a th:href="@{/home/dangKy}">Tạo mới</a></p>-->
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"
+></script>
+</body>
+</html>

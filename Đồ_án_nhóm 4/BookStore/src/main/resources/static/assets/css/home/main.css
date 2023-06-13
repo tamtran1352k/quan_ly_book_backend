@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #29303b;
+  font-weight: normal;
+}
+
+header {
+  border-bottom: 2px solid #e6ebf5;
+}
+
+header .btnTaoSuKien {
+  border: 1px solid #2dc275;
+  text-decoration: none;
+  color: #2dc275;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-right: 20px;
+  font-weight: 700;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header .btnTaoSuKien:hover {
+  color: #23a864;
+}
+
+header .btnDN {
+  text-decoration: none;
+  color: #2dc275;
+  font-weight: 400;
+}
+
+header .dropdown {
+  display: block;
+  margin-left: 10px;
+}
+
+header .dropdown .dropdown-toggle {
+  color: #2dc275;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item img {
+  height: 500px;
+}
+
+.event {
+  text-align: center;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.event a {
+  text-decoration: none;
+}
+
+.event a h3 {
+  display: inline;
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+}
+
+.event .event__list .event__item {
+  text-decoration: none;
+  padding: 20px;
+  border: none;
+}
+
+.event .event__list .event__item:hover .card-body {
+  color: #ff672a;
+}
+
+.event .event__list .event__item img {
+  height: 120px;
+}
+
+.event .event__list .event__item .card-body {
+  padding: 10px;
+  color: black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.category {
+  text-align: center;
+  border-bottom: 2px solid #ff672a;
+  padding-bottom: 30px;
+}
+
+.category a {
+  text-decoration: none;
+}
+
+.category a h3 {
+  color: black;
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline;
+}
+
+.category .category__list .category__item {
+  padding: 10px;
+  border: none;
+}
+
+.category .category__list .category__item a {
+  text-decoration: none;
+}
+
+.category .category__list .category__item a img {
+  width: 100%;
+  height: 150px;
+}
+
+.category .category__list .category__item a .card-body {
+  padding: 0;
+}
+
+.news {
+  text-align: center;
+}
+
+.news a {
+  text-decoration: none;
+}
+
+.news a h3 {
+  color: black;
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline;
+}
+
+.news .news__list .news__item {
+  padding: 10px;
+  border: none;
+}
+
+.news .news__list .news__item:hover a .card-body .card-title {
+  color: #ff672a;
+}
+
+.news .news__list .news__item a {
+  text-decoration: none;
+}
+
+.news .news__list .news__item a img {
+  width: 100%;
+  height: 120px;
+}
+
+.news .news__list .news__item a .card-body {
+  padding: 0;
+}
+
+.news .news__list .news__item a .card-body .card-title {
+  color: black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+footer {
+  background-color: #434343;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+.dangNhap {
+  background-color: white;
+  width: 30%;
+  margin: auto;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.dangNhap form a {
+  width: 100%;
+  margin: auto;
+}
+
+.dangNhap form .btnDangNhap {
+  width: 100%;
+}
+
+.dangNhap form p {
+  padding-top: 15px;
+  margin: 0;
+}
+
+.dangNhap form p a {
+  text-decoration: none;
+}
+
+.dangKy {
+  background-color: white;
+  width: 40%;
+  margin: auto;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.dangKy form .btnDangKy {
+  width: 100%;
+}
+
+.dangKy form p {
+  padding-top: 15px;
+  margin: 0;
+}
+
+.dangKy form p a {
+  text-decoration: none;
+}
+
+.thongTinCaNhan {
+  width: 50%;
+  margin: auto;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.thongTinCaNhan h3 {
+  font-weight: 700;
+  text-align: center;
+  color: #2dc275;
+}
+
+.thongTinCaNhan form {
+  background-color: white;
+}
+
+.thongTinCaNhan form .btnCapNhat {
+  background-color: #2dc275;
+  padding: 10px 20px;
+  width: 200px;
+  text-align: center;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.thongTinSuKien {
+  width: 70%;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.thongTinSuKien img {
+  width: 100%;
+  height: 400px;
+}
+
+.thongTinSuKien .card {
+  padding: 30px;
+  margin: 30px 0;
+}
+/*# sourceMappingURL=main.css.map */

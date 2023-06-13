@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trang chủ</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"/>
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet"/>
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/plugins/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/plugins/font-awesome/css/font-awesome.min.css}"/>
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/icon/themify-icons/themify-icons.css}"/>
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/icon/icofont/css/icofont.css}"/>
+    <!-- feather Awesome -->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/icon/feather/css/feather.css}"/>
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/jquery.mCustomScrollbar.css}"/>
+</head>
+
+<body>
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+
+        <nav class="navbar header-navbar pcoded-header">
+            <div class="navbar-wrapper">
+                <div class="navbar-logo">
+                    <a class="mobile-menu" id="mobile-collapse" href="#!">
+                        <i class="feather icon-menu"></i>
+                    </a>
+                    <a href='#'>
+                        <img class="img-fluid" th:src="@{/assets/images/logo.png}" alt="Theme-Logo">
+                    </a>
+                    <a class="mobile-options">
+                        <i class="feather icon-more-horizontal"></i>
+                    </a>
+                </div>
+
+                <div class="navbar-container container-fluid">
+                    <ul class="nav-left">
+                    </ul>
+                    <ul class="nav-right">
+                        <li class="header-notification">
+                            <div class="dropdown-primary dropdown">
+                                <div class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="feather icon-bell"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header-notification">
+                            <div class="dropdown-primary dropdown">
+                                <div class="displayChatbox dropdown-toggle" data-toggle="dropdown">
+                                    <i class="feather icon-message-square"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="user-profile header-notification">
+                            <div class="dropdown-primary dropdown">
+                                <th:block th:if="${username == 'anonymousUser'}">
+                                    <a th:href="@{/home/login}" class="btnDN"
+                                    ><span
+                                    ><i class="fa fa-sign-in-alt"></i> Đăng nhập </span
+                                    ></a>
+                                </th:block>
+                                <th:block th:unless="${username == 'anonymousUser'}">
+                                    <div class="dropdown ">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                           data-toggle="dropdown"
+                                           aria-haspopup="true" aria-expanded="false">
+                                            <img th:src="@{/assets/images/avatar-4.jpg}" class="img-radius"
+                                                 alt="User-Profile-Image">
+                                            <i class="feather icon-chevron-down"></i>
+                                        </a>
+                                        <ul class="show-notification profile-notification dropdown-menu"
+                                            data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                            <li>
+                                                <a class="dropdown-item" th:href="@{/home}">Đến trang
+                                                    Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="/logout">
+                                                    <i class="feather icon-log-out"></i> Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </th:block>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                <nav class="pcoded-navbar">
+                    <div class="pcoded-inner-navbar main-menu">
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="">
+                                <a th:href="@{/admin/dashboard}">
+                                    <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                                    <span class="pcoded-mtext">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a th:href="@{/admin/book}">
+                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                                    <span class="pcoded-mtext">Sách</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a th:href="@{/admin/author}">
+                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                                    <span class="pcoded-mtext">Tác giả</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a th:href="@{/admin/category}">
+                                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                                    <span class="pcoded-mtext">Danh mục</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a th:href="@{/admin/user}">
+                                    <span class="pcoded-micon"><i class="feather icon-user"></i></span>
+                                    <span class="pcoded-mtext">Tài khoản</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a th:href="@{/admin/role}">
+                                    <span class="pcoded-micon"><i class="feather icon-user"></i></span>
+                                    <span class="pcoded-mtext">Quyền</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="pcoded-content">
+                    <div class="pcoded-inner-content">
+                        <!-- Main-body start -->
+                        <div class="main-body">
+                            <div class="page-body">
+                                <div class="row">
+                                    <div class="col-md-12 mb-2">
+                                        <div class="page-header-breadcrumb">
+                                            <ul class="breadcrumb-title">
+                                                <li class="breadcrumb-item">
+                                                    <a href="/admin"> <i class="feather icon-home"></i> Trang
+                                                        chủ</a>
+                                                </li>
+                                                <li class="breadcrumb-item">
+                                                    <a href="/admin/role">Quyền</a>
+                                                </li>
+                                                <li class="breadcrumb-item"><a href="#!">Cập nhật quyền</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h2 class="text-uppercase text-center">Cập nhật quyền</h2>
+                                            </div>
+                                            <div class="card-block">
+                                                <form th:action="@{/admin/role/edit}" th:object="${role}"
+                                                      method="post">
+                                                    <div class="row">
+                                                        <div class="col-md-6 m-auto">
+                                                            <input type="hidden" th:field="*{id}" class="form-control"/>
+                                                            <div class="form-group">
+                                                                <label>Tên quyền</label>
+                                                                <input readonly type="text" th:field="*{name}"
+                                                                       path="name"
+                                                                       id="name"
+                                                                       class="form-control"/>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Mô tả</label>
+                                                                <input type="text" th:field="*{description}"
+                                                                       path="description"
+                                                                       id="desc"
+                                                                       class="form-control"/>
+                                                            </div>
+                                                            <div class="form-group mt-3">
+                                                                <button type="submit"
+                                                                        class="btn btn-primary m-b-0">Lưu lại
+                                                                </button>
+                                                                <a th:href="@{/admin/role}"
+                                                                   class="btn btn-secondary text-white">Quay
+                                                                    lại</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{/assets/plugins/jquery/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/assets/plugins/jquery-ui/js/jquery-ui.min.js}"></script>
+<script type="text/javascript" th:src="@{/assets/plugins/popper.js/js/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/assets/plugins/bootstrap/js/bootstrap.min.js}"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" th:src="@{/assets/plugins/jquery-slimscroll/js/jquery.slimscroll.js}"></script>
+<!-- modernizr js -->
+<script type="text/javascript" th:src="@{/assets/plugins/modernizr/js/modernizr.js}"></script>
+<script type="text/javascript" th:src="@{/assets/plugins/modernizr/js/css-scrollbars.js}"></script>
+<script th:src="@{/assets/js/pcoded.min.js}"></script>
+<script th:src="@{/assets/js/vartical-layout.min.js}"></script>
+<script th:src="@{/assets/js/jquery.mCustomScrollbar.concat.min.js}"></script>
+<!-- Custom js -->
+<script type="text/javascript" th:src="@{/assets/js/script.js}"></script>
+<script src="//cdn.ckeditor.com/4.11.4/full/ckeditor.js"></script>
+<script src="http://cdn.ckeditor.com/4.4.7/standard-all/adapters/jquery.js"></script>
+</body>
+
+</html>
